@@ -58,6 +58,7 @@
      <Compile Include="Assets\Goal_blue.cs" />
      <Compile Include="Assets\Goal_goal.cs" />
      <Compile Include="Assets\Goal_red.cs" />
+     <Compile Include="Assets\smack.cs" />
      <Compile Include="Assets\TutorialInfo\Scripts\TutorialInfo.cs" />
      <None Include="Assets\TutorialInfo\Fonts\LICENSE.txt" />
  <Reference Include="UnityEditor.StandardEvents">

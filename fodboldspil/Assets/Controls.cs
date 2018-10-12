@@ -9,15 +9,12 @@ public class Controls : MonoBehaviour
 
     public float speed;
     private Rigidbody2D rb2d;
-    public int count;
-    public Text countText;
 
 
     // Use this for initialization
     void Start()
     {
-        //Initialize count to zero.
-        count = 0;
+
     }
 
     // Update is called once per frame
@@ -41,5 +38,6 @@ public class Controls : MonoBehaviour
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
+
     }
 }

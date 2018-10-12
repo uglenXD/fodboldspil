@@ -17,7 +17,7 @@ public class Goal_red : MonoBehaviour {
 
     //https://answers.unity.com/questions/1012277/how-to-make-sound-play-only-once-on-trigger.html
     //lyd tutorial
-    public AudioClip goal1;
+   public AudioClip goal1;
    private AudioSource source;
 
     // Use this for initialization
