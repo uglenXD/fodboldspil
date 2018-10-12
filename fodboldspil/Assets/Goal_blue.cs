@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
+
 
 public class Goal_blue : MonoBehaviour {
 
@@ -47,6 +49,7 @@ public class Goal_blue : MonoBehaviour {
 
         print(scoreb);
 
+        //tjekker scoren til at vise den korrekte sprite
         if (scoreb == 0)
         {
             blue0.SetActive(true);
@@ -74,6 +77,10 @@ public class Goal_blue : MonoBehaviour {
             blue1.SetActive(false);
             blue2.SetActive(false);
             blue3.SetActive(true);
+
+            //resetter spil når vi har fundet en vinder
+            Scene loadedLevel = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(loadedLevel.buildIndex);
         }
     }
 
@@ -83,13 +90,15 @@ public class Goal_blue : MonoBehaviour {
     {
         if (col.tag == "Ball")
         {
+            //+1 til scoren, sådan sprite kan skifte
             scoreb = scoreb + 1;
             print(scoreb);
+
+            //når der er scoret resetter placeringen af spillerne og bold
             player1.transform.position = new Vector3(24, 0, 0);
             player2.transform.position = new Vector3(-24, 0, 0);
             bold.transform.position = new Vector3(0, 0, 0);
-            //source.clip = goal1;
-            //source.Play();
+            //spiller lyd af mål
             source.PlayOneShot (goal1,1);
         }
     }
